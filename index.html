@@ -1,0 +1,197 @@
+<html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>인동: 서울지역대학 인권연합동아리</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+
+            <a href="#" class="logo" onclick="showHome()">
+                <img src="images/Unknown.png" alt="인동 로고">
+            </a>
+        <nav class="nav">       
+            <a href="index.html">HOME</a>       
+            <nav class="nav-dropdown">
+                <a href="about.html" class="nav-main">ABOUT</a>
+                   <div class="dropdown-menu">
+                        <a href="about.html">인동 소개</a>
+                        <a href="constitution.html">인동 정관</a>
+                        <a href="declaration.html">인동 창립선언문</a>
+                        <a href="anti-violence.html">인동 반성폭력 세칙</a>
+                   </div>
+            </nav>
+            <a href="newsletter.html">NEWSLETTER</a>
+            <a href="activity.html">ACTIVITY</a>
+            <a href="join us.html">JOIN US</a>
+        </nav>
+
+            <button class="menu-button" onclick="toggleMenu()" aria-label="메뉴 열기">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu">\
+        <a href="index.html" onclick="showhome()">HOME</a>
+        <a href="about.html" onclick="closeMenu()">ABOUT</a>
+        <a href="newsletter.html" onclick="closeMenu()">NEWSLETTER</a>
+        <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
+        <a href="join us.html" onclick="closeMenu()">JOIN US</a>
+    </div>
+
+
+    <!-- MAIN -->
+<main>
+    <section class="background">
+        <div class="image">
+            <img src="images/main2.jpg">
+        </div>
+        <div class="image-overlay">
+            <h1>시대를 담은 지성</h1>
+            <h2>모두를 위한 평등</h2>
+            <h3>사람을 품은 공동체</h3>
+        </div>
+    </section>
+
+    <!-- HERO / ACTIVITY SLIDER -->
+    <section class="hero-slider">
+
+        <!-- SLIDES -->
+        <div class="slides-wrapper">
+
+            <div class="slide">
+                <img src="images/activity01.jpeg" alt="활동 사진 1">
+            </div>
+
+            <div class="slide">
+                <img src="images/activity02.jpeg" alt="활동 사진 2">
+            </div>
+
+            <div class="slide">
+                <img src="images/main2.jpg" alt="활동 사진 3">
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button
+            class="slider-button prev"
+            onclick="changeSlide(-1)">
+            ←
+        </button>
+
+        <button
+            class="slider-button next"
+            onclick="changeSlide(1)">
+            →
+        </button>
+
+        <!-- DOTS -->
+        <div class="slider-dots">
+            <button
+                class="dot active"
+                onclick="goToSlide(0)">
+            </button>
+
+            <button
+                class="dot"
+                onclick="goToSlide(1)">
+            </button>
+
+            <button
+                class="dot"
+                onclick="goToSlide(2)">
+            </button>
+        </div>
+
+        <div class="hero-content">
+
+            <p class="hero-description">
+                인동: 서울지역대학 인권연합동아리는<br>
+                <span>인간의 존엄과 권리를 지키기 위해</span><br>
+                <span>사회적인 억압과 차별에 맞서는 대학생 연합동아리입니다.</span>
+            </p>
+
+            <a href="#activity" class="hero-button">
+                활동 보러가기 →
+            </a>
+
+        </div>
+    </section>
+
+
+        <!-- NEWSLETTER -->
+        <section id="newsletter" class="section newsletter-section">
+
+            <!-- JSON으로 뉴스레터가 들어오는 부분 -->
+            <div id="newsletterList" class="newsletter-grid">
+                <p class="loading">뉴스레터를 불러오는 중...</p>
+            </div>
+
+        </section>
+
+
+        <!-- NEWSLETTER DETAIL -->
+        <section id="newsletterDetail" class="newsletter-detail hidden">
+
+            <div class="detail-container">
+
+                <button class="back-button" onclick="showNewsletterList()">
+                    ← 뉴스레터 목록
+                </button>
+
+                <div id="detailContent">
+                    <!-- JS가 내용을 삽입 -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="join us" class="section join us-section">
+
+            <div class="section-label">
+                JOIN US
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="인동 로고">
+        </div>
+
+        <div>
+            서울지역대학 인권연합동아리
+        </div>
+
+        <div class="footer-copy">
+            © 2026 SEOUL UNIVERSITY HUMAN RIGHTS NETWORK
+        </div>
+
+    </footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
