@@ -1348,3 +1348,21 @@ css
         transition: none;
     }
 }
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        background: #f5f5f5;
+        padding: 10px 20px;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li {
+        padding: 10px 0;
+    }
+}

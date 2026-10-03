@@ -215,3 +215,14 @@ function closeMenu() {
         menu.classList.remove("active");
     }
 }
+
+document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
+        }
+    });
+});
