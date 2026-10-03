@@ -221,7 +221,7 @@ document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
         if (window.innerWidth <= 768) {
             e.preventDefault();
 
-            const dropdown = this.parentElement;
+            const dropdown = this.closest('.dropdown');
             dropdown.classList.toggle('active');
         }
     });
