@@ -136,35 +136,6 @@ button {
 }
 
 
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu {
-    display: none;
-
-    position: fixed;
-    z-index: 90;
-
-    top: 78px;
-    left: 0;
-    width: 100%;
-
-    background: white;
-
-    padding: 25px 30px;
-
-    border-bottom: 1px solid #eee;
-}
-
-.mobile-menu.active {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    font-weight: 700;
-}
-
 .background {
     position: relative;
     width: 100%;
@@ -1386,61 +1357,119 @@ html {
     }
 }
 
-/* SMALL MOBILE */
-@media (max-width: 400px) {
 
-    .section {
-        padding: 55px 18px;
-    }
+/* =========================
+   MOBILE MENU
+========================= */
 
-    .slides-wrapper {
-        height: 65vw;
-        min-height: 240px;
-    }
-
-    .hero-content {
-        padding: 28px 18px 35px;
-    }
-
-    .newsletter-card {
-        min-height: 210px;
-    }
-
-    .activity-box {
-        padding: 25px 18px;
-    }
+.mobile-menu {
+    display: none;
 }
 
-
-/* 모바일 ABOUT 메뉴 */
 @media screen and (max-width: 768px) {
 
-    .nav-dropdown {
-        position: relative;
-        width: 100%;
-    }
-
-    .nav-dropdown .dropdown-menu {
+    /* 모바일에서 기존 PC 메뉴 숨기기 */
+    .nav {
         display: none;
-        position: static;
-        transform: none;
-        min-width: 0;
-        width: 100%;
-        padding: 5px 0;
-        box-shadow: none;
-        border-radius: 0;
-        opacity: 1;
-        visibility: visible;
-        transition: none;
     }
 
-    .nav-dropdown.active .dropdown-menu {
+    /* 메뉴 버튼 */
+    .menu-button {
         display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: #222;
+        z-index: 1001;
     }
 
-    .nav-dropdown .dropdown-menu a {
-        padding: 12px 25px;
-        white-space: normal;
+    /* 펼쳐지는 모바일 메뉴 */
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 75%;
+        max-width: 360px;
+        height: 100dvh;
+
+        padding: 100px 30px 40px;
+        gap: 0;
+
+        background: #fff;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+
+        transform: translateX(110%);
+        visibility: hidden;
+        transition: transform 0.35s ease,
+                    visibility 0.35s ease;
+
+        z-index: 1000;
+        overflow-y: auto;
     }
 
+    /* 메뉴 열림 */
+    .mobile-menu.active {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    /* 상위 메뉴 */
+    .mobile-menu > a,
+    .mobile-dropdown-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        padding: 18px 0;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        text-decoration: none;
+
+        background: none;
+        border: none;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    /* ABOUT 하위 메뉴 */
+    .mobile-submenu {
+        display: flex;
+        flex-direction: column;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    .mobile-submenu.active {
+        max-height: 250px;
+    }
+
+    .mobile-submenu a {
+        padding: 12px 0 12px 18px;
+        font-size: 14px;
+        color: #777;
+        text-decoration: none;
+    }
+
+    .mobile-submenu a:hover {
+        color: #222;
+    }
+
+    /* 화살표 회전 */
+    .dropdown-arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-dropdown-button.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
 }

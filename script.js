@@ -197,35 +197,55 @@ function showHome() {
 }
 
 
-// 모바일 메뉴
+
+// 모바일 메뉴 열기 / 닫기
 function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
+    const button = document.querySelector(".menu-button");
 
-    if (menu) {
-        menu.classList.toggle("active");
-    }
+    const isOpen = menu.classList.toggle("active");
+
+    button.setAttribute("aria-expanded", isOpen);
+    button.setAttribute(
+        "aria-label",
+        isOpen ? "메뉴 닫기" : "메뉴 열기"
+    );
 }
-
 
 // 모바일 메뉴 닫기
 function closeMenu() {
     const menu = document.getElementById("mobileMenu");
+    const button = document.querySelector(".menu-button");
+    const aboutButton = document.querySelector(
+        ".mobile-dropdown-button"
+    );
+    const submenu = document.getElementById("aboutSubmenu");
 
-    if (menu) {
-        menu.classList.remove("active");
-    }
+    menu.classList.remove("active");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "메뉴 열기");
+
+    submenu.classList.remove("active");
+    aboutButton.classList.remove("active");
+    aboutButton.setAttribute("aria-expanded", "false");
 }
 
-document.querySelectorAll('.nav-item.dropdown > .nav-link')
-    .forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
+// ABOUT 하위 메뉴 열기 / 닫기
+function toggleAboutMenu() {
+    const submenu = document.getElementById("aboutSubmenu");
+    const button = document.querySelector(
+        ".mobile-dropdown-button"
+    );
 
-                const dropdown = this.closest('.dropdown');
-                const isOpen = dropdown.classList.toggle('active');
+    const isOpen = submenu.classList.toggle("active");
 
-                this.setAttribute('aria-expanded', isOpen);
-            }
-        });
-    });
+    button.classList.toggle("active", isOpen);
+    button.setAttribute("aria-expanded", isOpen);
+}
+
+// 화면이 PC 크기로 바뀌면 모바일 메뉴 닫기
+window.addEventListener("resize", function() {
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+});

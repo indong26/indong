@@ -45,14 +45,34 @@
     </header>
 
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="mobile-menu">\
-        <a href="index.html" onclick="showhome()">HOME</a>
-        <a href="about.html" onclick="closeMenu()">ABOUT</a>
-        <a href="newsletter.html" onclick="closeMenu()">NEWSLETTER</a>
-        <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
-        <a href="join us.html" onclick="closeMenu()">JOIN US</a>
+    
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+
+    <a href="index.html" onclick="closeMenu()">HOME</a>
+
+    <!-- ABOUT -->
+    <div class="mobile-dropdown">
+        <button class="mobile-dropdown-button"
+                onclick="toggleAboutMenu()"
+                aria-expanded="false">
+            ABOUT
+            <span class="dropdown-arrow">⌄</span>
+        </button>
+
+        <div class="mobile-submenu" id="aboutSubmenu">
+            <a href="about.html" onclick="closeMenu()">인동 소개</a>
+            <a href="constitution.html" onclick="closeMenu()">인동 정관</a>
+            <a href="declaration.html" onclick="closeMenu()">인동 창립선언문</a>
+            <a href="anti-violence.html" onclick="closeMenu()">인동 반성폭력 세칙</a>
+        </div>
     </div>
+
+    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTER</a>
+    <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
+    <a href="join-us.html" onclick="closeMenu()">JOIN US</a>
+
+</div>
 
 
     <!-- MAIN -->
