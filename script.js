@@ -216,13 +216,16 @@ function closeMenu() {
     }
 }
 
-document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
+document.querySelectorAll('.nav-item.dropdown > .nav-link')
+    .forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
 
-            const dropdown = this.closest('.dropdown');
-            dropdown.classList.toggle('active');
-        }
+                const dropdown = this.closest('.dropdown');
+                const isOpen = dropdown.classList.toggle('active');
+
+                this.setAttribute('aria-expanded', isOpen);
+            }
+        });
     });
-});
