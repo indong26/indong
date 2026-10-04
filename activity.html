@@ -31,51 +31,57 @@
 
         </a>
 
+<li class="nav-dropdown">
+    <a href="#" class="nav-main">ABOUT</a>
 
-        <nav class="nav">
-
-            <a href="about.html">
-                ABOUT
-            </a>
-
-            <a href="newsletter.html">
-                NEWSLETTER
-            </a>
-
-            <a href="activity.html">
-                ACTIVITY
-            </a>
-
+    <ul class="dropdown-menu">
+        <li><a href="about.html">인동 소개</a></li>
+        <li><a href="constitution.html">인동 정관</a></li>
+        <li><a href="declaration.html">인동 창립선언문</a></li>
+        <li><a href="anti-violence.html">인동 반성폭력 세칙</a></li>
+    </ul>
+</li>
+            <a href="newsletter.html">NEWSLETTER</a>
+            <a href="activity.html">ACTIVITY</a>
+            <a href="join us.html">JOIN US</a>
         </nav>
 
+            <button class="menu-button" onclick="toggleMenu()" aria-label="메뉴 열기">
+                ☰
+            </button>
 
-        <button
-            class="menu-button"
-            onclick="toggleMenu()">
+        </div>
+    </header>
 
-            ☰
 
+    
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+    <button class="menu-button" onclick="closeMenu()">☰</button>
+    <a href="index.html" onclick="closeMenu()">HOME</a>
+
+    <!-- ABOUT -->
+    <div class="mobile-dropdown">
+        <button class="mobile-dropdown-button"
+                onclick="toggleAboutMenu()"
+                aria-expanded="false">
+            ABOUT
+            <span class="dropdown-arrow">⌄</span>
         </button>
 
+        <div class="mobile-submenu" id="aboutSubmenu">
+            <a href="about.html" onclick="closeMenu()">인동 소개</a>
+            <a href="constitution.html" onclick="closeMenu()">인동 정관</a>
+            <a href="declaration.html" onclick="closeMenu()">인동 창립선언문</a>
+            <a href="anti-violence.html" onclick="closeMenu()">인동 반성폭력 세칙</a>
+        </div>
     </div>
 
-</header>
-
-
-<div id="mobileMenu" class="mobile-menu">
-
-    <a href="about.html">ABOUT</a>
-
-    <a href="newsletter.html">
-        NEWSLETTER
-    </a>
-
-    <a href="activity.html">
-        ACTIVITY
-    </a>
+    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTERS</a>
+    <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
+    <a href="join-us.html" onclick="closeMenu()">JOIN US</a>
 
 </div>
-
 
 <main>
 
