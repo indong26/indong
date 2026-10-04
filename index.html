@@ -48,7 +48,7 @@
     
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="mobile-menu">
-
+    <button class="menu-button" onclick="closeMenu()">☰</button>
     <a href="index.html" onclick="closeMenu()">HOME</a>
 
     <!-- ABOUT -->
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTER</a>
+    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTERS</a>
     <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
     <a href="join-us.html" onclick="closeMenu()">JOIN US</a>
 
@@ -147,7 +147,7 @@
                 <span>사회적인 억압과 차별에 맞서는 대학생 연합동아리입니다.</span>
             </p>
 
-            <a href="#activity" class="hero-button">
+            <a href="activity.html" class="hero-button">
                 활동 보러가기 →
             </a>
 
@@ -156,32 +156,7 @@
 
 
         <!-- NEWSLETTER -->
-        <section id="newsletter" class="section newsletter-section">
-
-            <!-- JSON으로 뉴스레터가 들어오는 부분 -->
-            <div id="newsletterList" class="newsletter-grid">
-                <p class="loading">뉴스레터를 불러오는 중...</p>
-            </div>
-
-        </section>
-
-
-        <!-- NEWSLETTER DETAIL -->
-        <section id="newsletterDetail" class="newsletter-detail hidden">
-
-            <div class="detail-container">
-
-                <button class="back-button" onclick="showNewsletterList()">
-                    ← 뉴스레터 목록
-                </button>
-
-                <div id="detailContent">
-                    <!-- JS가 내용을 삽입 -->
-                </div>
-
-            </div>
-
-        </section>
+     
 
 
         <section id="join us" class="section join us-section">

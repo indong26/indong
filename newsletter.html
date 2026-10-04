@@ -11,6 +11,7 @@
     <title>NEWSLETTER | 서울지역대학 인권연합동아리</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newsletter.css">
 
 </head>
 
@@ -62,6 +63,7 @@
 
 
 <div id="mobileMenu" class="mobile-menu">
+    <button class="menu-button" onclick="closeMenu()">☰</button>
 
     <a href="index.html" onclick="showhome()">HOME</a>
         <a href="about.html" onclick="closeMenu()">ABOUT</a>
@@ -73,63 +75,37 @@
 </div>
 
 
-<main>
+<main class="newsletter-page">
+  <section class="newsletter-heading">
+    <h1>NEWSLETTERS</h1>
+  </section>
 
-<section class="page-header">
+  <section id="newsletter-detail" hidden>
+    <button class="back-button" onclick="showList()">
+      ← 뉴스레터 목록
+    </button>
+    <div id="detail-content"></div>
+  </section>
 
-    <div class="section-label">
-        NEWSLETTER
+  <section id="newsletter-list">
+    <div id="featured-newsletter"></div>
+
+    <div class="category-section">
+      <div class="category-list" id="category-list">
+        <button class="category-btn active" data-category="전체">전체</button>
+        <button class="category-btn" data-category="인권">인권</button>
+        <button class="category-btn" data-category="연대">연대</button>
+        <button class="category-btn" data-category="동아리 활동">동아리 활동</button>
+        <button class="category-btn" data-category="칼럼">칼럼</button>
+      </div>
     </div>
 
-    <h1>
-        우리가 보낸<br>
-        <span>이야기들</span>
-    </h1>
-
-</section>
-
-
-<section class="newsletter-section">
-
-    <div
-        id="newsletterList"
-        class="newsletter-grid">
-
-        <p class="loading">
-            뉴스레터를 불러오는 중...
-        </p>
-
+    <div class="archive-heading">
+      <span id="result-count"></span>
     </div>
-
-</section>
-
-
-<section
-    id="newsletterDetail"
-    class="newsletter-detail hidden">
-
-    <div class="detail-container">
-
-        <button
-            class="back-button"
-            onclick="showNewsletterList()">
-
-            ← 뉴스레터 목록
-
-        </button>
-
-
-        <div id="detailContent">
-
-        </div>
-
-    </div>
-
-</section>
-
-
+    <div class="newsletter-grid" id="newsletter-grid"></div>
+  </section>
 </main>
-
 
 <footer class="footer">
 
@@ -151,8 +127,8 @@
 
 </footer>
 
-
 <script src="script.js"></script>
+<script src="newsletter.js"></script>
 
 </body>
 
