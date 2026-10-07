@@ -88,75 +88,14 @@
         </div>
     </section>
 
-    <!-- HERO / ACTIVITY SLIDER -->
-    <section class="hero-slider">
-
-        <!-- SLIDES -->
-        <div class="slides-wrapper">
-
-            <div class="slide">
-                <img src="images/activity01.jpeg" alt="활동 사진 1">
-            </div>
-
-            <div class="slide">
-                <img src="images/activity02.jpeg" alt="활동 사진 2">
-            </div>
-
-            <div class="slide">
-                <img src="images/main2.jpg" alt="활동 사진 3">
-            </div>
-
-        </div>
-
-        <!-- BUTTON -->
-        <button
-            class="slider-button prev"
-            onclick="changeSlide(-1)">
-            ←
-        </button>
-
-        <button
-            class="slider-button next"
-            onclick="changeSlide(1)">
-            →
-        </button>
-
-        <!-- DOTS -->
-        <div class="slider-dots">
-            <button
-                class="dot active"
-                onclick="goToSlide(0)">
-            </button>
-
-            <button
-                class="dot"
-                onclick="goToSlide(1)">
-            </button>
-
-            <button
-                class="dot"
-                onclick="goToSlide(2)">
-            </button>
-        </div>
-
-        <div class="hero-content">
-
-            <p class="hero-description">
-                인동: 서울지역대학 인권연합동아리는<br>
-                <span>인간의 존엄과 권리를 지키기 위해</span><br>
-                <span>사회적인 억압과 차별에 맞서는 대학생 연합동아리입니다.</span>
-            </p>
-
-            <a href="activity.html" class="hero-button">
-                활동 보러가기 →
-            </a>
-
-        </div>
-    </section>
-
-
-        <!-- NEWSLETTER -->
+<!-- NEWSLETTER -->
      
+    <section class="latest-newsletter">
+        <div class="header">
+            <h2 class="english">LATEST UPDATES!</h2>
+        </div>
+        <div class="latest-newsletter-grid" id="latest-newsletter-grid"></div>
+    </section>
 
 
         <section id="join us" class="section join us-section">
@@ -186,7 +125,7 @@
 
     </footer>
 
-
+<script src="newsletter.js"></script>
 <script src="script.js"></script>
 
 </body>

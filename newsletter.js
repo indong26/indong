@@ -242,3 +242,66 @@ window.addEventListener("popstate", () => {
 });
 
 loadNewsletters();
+
+fetch("newsletter.json")
+    .then(response => response.json())
+    .then(newsletters => {
+
+        // 기존 뉴스레터 페이지 기능
+        loadNewsletters(newsletters);
+
+        // 메인 페이지 최신 뉴스레터
+        loadLatestNewsletters(newsletters);
+
+    })
+    .catch(error => {
+        console.error("뉴스레터를 불러오지 못했습니다:", error);
+    });
+
+
+/* =========================
+   최신 뉴스레터 4개
+========================= */
+
+function loadLatestNewsletters(newsletters) {
+
+    const container =
+        document.getElementById("latest-newsletter-grid");
+
+    // index.html이 아니면 종료
+    if (!container) return;
+
+
+    // 날짜 기준 최신순
+    const latest = [...newsletters]
+        .sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        })
+        .slice(0, 4);
+
+
+    container.innerHTML = latest.map(newsletter => {
+
+        return `
+            <a
+                href="newsletter.html?id=${newsletter.id}"
+                class="latest-newsletter-card"
+            >
+
+                <img
+                    src="${newsletter.thumbnail}"
+                >
+
+                <h3 class="latest-newsletter-title">
+                    ${newsletter.title}
+                </h3>
+
+                <div class="latest-newsletter-date">
+                    ${newsletter.date}
+                </div>
+
+            </a>
+        `;
+
+    }).join("");
+}

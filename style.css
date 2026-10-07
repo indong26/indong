@@ -202,6 +202,7 @@ button {
 }
 
 
+
 /* =========================
    SECTION
 ========================= */
@@ -389,239 +390,74 @@ css
     color: var(--purple);
 }
 
-
-/* =========================
-   HERO SLIDER
-========================= */
-
-.hero-slider {
-    position: relative;
-    align-items: stretch;
-
+.latest-newsletter {
     width: 100%;
-    height: 100%;
-
-    overflow: hidden;
-    display: flex;
-
-    background: #FFF;
+    height: 500px;
+    box-sizing: border-box;
 }
 
-
-/* 사진들이 가로로 놓이는 공간 */
-
-.slides-wrapper {
-    display: flex;
-
-    width: 65%;
-    height: 100%;
-
-    flex-shrink: 0;
-
-    transition: transform 0.6s ease;
+.latest-newsletter .header {
+    width: 300px;
+    height: 35px;
+    background-color: #222;
+    margin-bottom: 25px;
+}
+.latest-newsletter h2 {
+    font-family: jejudoldam;
+    color: #F7F7F7;
+    text-align: center;
 }
 
-
-/* 각각의 슬라이드 */
-
-.slide {
-    position: relative;
-
-    flex: 0 0 100%;
-
-    width: 100%;
-    height: 100%;
-
-    overflow: hidden;
+.latest-newsletter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px
 }
+.latest-newsletter-card {
+    display: block;
 
+    color: #111;
+    text-decoration: none;
+}
+.latest-newsletter-card img {
+    display: block;
 
-/* 사진 */
-
-.slide img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
 
     object-fit: cover;
 
-    display: block;
+    margin-bottom: 15px;
+
+    transition: transform 0.3s ease;
 }
 
-
-/* 사진 위 어두운 효과 */
-
-.slide::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    flex: 0 0 100%;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0.05)
-        );
-
-    z-index: 1;
+.latest-newsletter-card:hover img {
+    transform: scale(1.03);
 }
 
-/* =========================
-   SLIDER BUTTON
-========================= */
+/* 제목 */
 
-.slider-button {
-    position: absolute;
-
-    z-index: 20;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 55px;
-    height: 55px;
-
-    border: 1px solid rgba(255,255,255,0.7);
-
-    border-radius: 50%;
-
-    background: rgba(0,0,0,0.15);
-
-    color: white;
+.latest-newsletter-title {
+    margin: 0;
+    font-family: jejudoldam;
+    color:#555;
 
     font-size: 20px;
+    line-height: 1.4;
 
-    cursor: pointer;
-
-    transition: all 0.2s ease;
+    font-weight: 600;
 }
 
 
-.slider-button:hover {
-    background: var(--yellow);
+/* 날짜 */
 
-    color: #222;
+.latest-newsletter-date {
+    margin-top: 8px;
 
-    border-color: var(--yellow);
-}
+    font-size: 12px;
 
-
-.slider-button.prev {
-    left: 30px;
-}
-
-
-.slider-button.next {
-    right: 30px;
-}
-
-
-/* =========================
-   DOTS
-========================= */
-
-.slider-dots {
-    position: absolute;
-
-    z-index: 20;
-
-    bottom: 35px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    display: flex;
-
-    gap: 8px;
-}
-
-
-.dot {
-    width: 9px;
-    height: 9px;
-
-    padding: 0;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.5);
-
-    cursor: pointer;
-}
-
-
-.dot.active {
-    background: var(--yellow);
-
-    transform: scale(1.3);
-}
-/* =========================
-   ABOUT DROPDOWN
-========================= */
-
-.nav-dropdown {
-    list-style: none;
-    position: relative;
-}
-
-.nav-dropdown .nav-main {
-    display: block;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero-content {
-    position: relative;
-    width: 35%;
-    padding: 50px;
-    box-sizing: border-box;
-    z-index: 5;
-    color: var(--black);
-}
-
-.hero-description {
-    margin: 0;
-
-    color: #666;
-
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.hero-description span {
-    font-weight: 700;
-    color: var(--black);
-}
-
-.hero-button {
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding: 14px 25px;
-
-    background: var(--black);
-    color: white;
-
-    border-radius: 100px;
-
-    font-weight: 700;
-
-    transition: 0.25s;
-}
-
-.hero-button:hover {
-    background: var(--purple);
-    transform: translateY(-3px);
+    color: #888;
 }
 
 /* 서브메뉴 */
@@ -651,6 +487,9 @@ css
     font-family: April16thTTF-Promise;
 }
 
+.nav-dropdown {
+    list-style: none;
+}
 /* 서브메뉴 링크 */
 .dropdown-menu a {
     display: block;
@@ -907,6 +746,23 @@ html {
     .about-text p {
         margin-bottom: 18px;
     }
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 14px 25px;
+
+    background: var(--black);
+    color: white;
+
+    border-radius: 100px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
 
     /* NEWSLETTER */
     .section-top {
