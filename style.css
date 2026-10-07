@@ -156,7 +156,7 @@ button {
 .background {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 0vh;
     overflow: hidden;
     margin-bottom: 25px;
 }
@@ -213,65 +213,6 @@ button {
 
     padding: 130px 30px;
 }
-
-.section-label {
-    display: inline-block;
-
-    padding: 12px 40px;
-
-    background: var(--yellow);
-
-    font-size: 30px;
-    font-weight: 900;
-
-    letter-spacing: 0.08em;
-
-    margin-bottom: 25px;
-}
-
-.section h2 {
-    font-size: clamp(40px, 5vw, 65px);
-
-    line-height: 1.1;
-    letter-spacing: -0.06em;
-
-    font-weight: 900;
-}
-
-.section h2 span {
-    color: var(--purple);
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-section {
-    border-top: 1px solid #eee;
-}
-
-.about-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 100px;
-
-    align-items: start;
-}
-
-.about-text {
-    color: #555;
-
-    font-size: 17px;
-}
-
-.about-text p {
-    margin-bottom: 25px;
-}
-
-
 
 /* =========================
    ACTIVITY
@@ -412,64 +353,6 @@ button {
 
     .hero h1 {
         font-size: 52px;
-    }
-
-    .yellow-circle {
-        width: 220px;
-        height: 220px;
-
-        right: -50px;
-        top: 80px;
-    }
-
-    .purple-circle {
-        width: 100px;
-        height: 100px;
-
-        right: 30px;
-        bottom: 100px;
-    }
-
-    .section {
-        padding: 90px 25px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .section-top {
-        flex-direction: column;
-
-        align-items: start;
-
-        gap: 30px;
-    }
-
-    .section-description {
-        text-align: left;
-    }
-
-    .newsletter-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .newsletter-card {
-        min-height: 280px;
-    }
-
-    .activity-box {
-        grid-template-columns: 1fr;
-
-        padding: 40px 30px;
-
-        gap: 50px;
-    }
-
-    .activity-title h2 {
-        font-size: 38px;
     }
 
     .footer {
