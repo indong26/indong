@@ -1277,29 +1277,28 @@ html {
         transform: rotate(180deg);
     }
     .document-layout {
-        display: flex;
-        align-items: flex-start;
-        gap: 25px;
-        margin: 30px auto;
-        padding: 0 20px;
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
     }
 
     /* 왼쪽 메뉴 */
     .side-menu {
-        position: sticky;
-        width: 30%;
-        padding: 18px;
+        position: static;
+        width: 100%;
+    }
+    .side-menu nav {
+        flex-direction: row;
     }
 
     .side-menu h3 {
-        font-size: 17px;
+        font-size: 20px;
         margin-bottom: 10px;
     }
 
     /* 본문 */
     .document-content {
-        flex: 1;
-        width: 70%;
+        width: 100%;
     }
 
     .document-content h2 {
