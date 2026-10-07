@@ -20,13 +20,20 @@ html {
     font-style: normal;
 }
 
+@font-face {
+    font-family: "jejudoldam";
+    src: url("fonts/EF_jejudoldam(TTF).ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Pretendard",
         "Noto Sans KR",
-        sans-serif;
+        sans-serif,
+        jejudoldam;
 
     color: #222;
     background: #fff;
@@ -168,6 +175,7 @@ button {
 
 /* 이미지 위에 올라가는 글자 */
 .image-overlay {
+    font-family: jejudoldam;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -188,23 +196,8 @@ button {
 .image-overlay h1,
 .image-overlay h2,
 .image-overlay h3 {
-    position: relative;
-    z-index: 3;
     margin: 10px 0;
-}
-
-.image-overlay h1 {
-    font-size: 60px;
-    font-weight: 1000;
-}
-
-.image-overlay h2 {
-    font-size: 60px;
-    font-weight: 1000;
-}
-
-.image-overlay h3 {
-    font-size: 60px;
+    font-size: clamp(40px, 5vw, 70px);
     font-weight: 1000;
 }
 
