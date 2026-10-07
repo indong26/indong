@@ -18,31 +18,28 @@
 
 <body>
 
-
 <header class="header">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="#" class="logo" onclick="showHome()">
+            <a href="index.html" class="logo">
                 <img src="images/Unknown.png" alt="인동 로고">
             </a>
-
         <nav class="nav">
-            <a href="index.html">HOME</a>       
+            <a href="index.html" class="english">HOME</a>       
             
-       <li class="nav-dropdown">
+<li class="nav-dropdown">
     <a href="#" class="nav-main">ABOUT</a>
 
     <ul class="dropdown-menu">
-        <li><a href="about.html">인동 소개</a></li>
-        <li><a href="constitution.html">인동 정관</a></li>
-        <li><a href="declaration.html">인동 창립선언문</a></li>
-        <li><a href="anti-violence.html">인동 반성폭력 세칙</a></li>
+        <li><a href="about.html">소개</a></li>
+        <li><a href="constitution.html">정관</a></li>
+        <li><a href="declaration.html">창립선언문</a></li>
+        <li><a href="anti-violence.html">반성폭력 세칙</a></li>
     </ul>
 </li>
-            <a href="newsletter.html">NEWSLETTER</a>
-            <a href="activity.html">ACTIVITY</a>
-            <a href="join us.html">JOIN US</a>
+            <a href="newsletter.html" class="english">NEWSLETTER</a>
+            <a href="activity.html" class="english">ACTIVITY</a>
+            <a href="join us.html" class="english">JOIN US</a>
         </nav>
 
             <button class="menu-button" onclick="toggleMenu()" aria-label="메뉴 열기">
@@ -57,7 +54,7 @@
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="mobile-menu">
     <button class="menu-button" onclick="closeMenu()">☰</button>
-    <a href="index.html" onclick="closeMenu()">HOME</a>
+    <a href="index.html" class="english" onclick="closeMenu()">HOME</a>
 
     <!-- ABOUT -->
     <div class="mobile-dropdown">
@@ -69,38 +66,23 @@
         </button>
 
         <div class="mobile-submenu" id="aboutSubmenu">
-            <a href="about.html" onclick="closeMenu()">인동 소개</a>
-            <a href="constitution.html" onclick="closeMenu()">인동 정관</a>
-            <a href="declaration.html" onclick="closeMenu()">인동 창립선언문</a>
-            <a href="anti-violence.html" onclick="closeMenu()">인동 반성폭력 세칙</a>
+            <a href="about.html" onclick="closeMenu()">소개</a>
+            <a href="constitution.html" onclick="closeMenu()">정관</a>
+            <a href="declaration.html" onclick="closeMenu()">창립선언문</a>
+            <a href="anti-violence.html" onclick="closeMenu()">반성폭력 세칙</a>
         </div>
     </div>
 
-    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTERS</a>
-    <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
-    <a href="join-us.html" onclick="closeMenu()">JOIN US</a>
-
-</div>
-
-</header>
-
-
-<div id="mobileMenu" class="mobile-menu">
-    <button class="menu-button" onclick="closeMenu()">☰</button>
-
-    <a href="index.html" onclick="showhome()">HOME</a>
-        <a href="about.html" onclick="closeMenu()">ABOUT</a>
-        <a href="newsletter.html" onclick="closeMenu()">NEWSLETTERS</a>
-        <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
-        <a href="join us.html" onclick="closeMenu()">JOIN US</a>
-    </div>
+    <a href="newsletter.html" class="english" onclick="closeMenu()">NEWSLETTERS</a>
+    <a href="activity.html" class="english" onclick="closeMenu()">ACTIVITY</a>
+    <a href="join-us.html" class="english" onclick="closeMenu()">JOIN US</a>
 
 </div>
 
 
 <main class="newsletter-page">
   <section class="newsletter-heading">
-    <h1>NEWSLETTERS</h1>
+    <h1 class="english">NEWSLETTERS</h1>
   </section>
 
   <section id="newsletter-detail" hidden>

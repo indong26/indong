@@ -14,33 +14,30 @@
 
 </head>
 
-
 <body>
 
 <header class="header">
+        <div class="header-inner">
 
-    <div class="header-inner">
-
-        <a href="index.html" class="logo">
-            <img
-                src="images/logo.png"
-                alt="서울지역대학 인권연합동아리">
-        </a>
-
-
+            <a href="#" class="logo" onclick="showHome()">
+                <img src="images/Unknown.png" alt="인동 로고">
+            </a>
+        <nav class="nav">       
+            <a href="index.html" class="english">HOME</a>       
+            
 <li class="nav-dropdown">
     <a href="#" class="nav-main">ABOUT</a>
 
     <ul class="dropdown-menu">
-        <li><a href="about.html">인동 소개</a></li>
-        <li><a href="constitution.html">인동 정관</a></li>
-        <li><a href="declaration.html">인동 창립선언문</a></li>
-        <li><a href="anti-violence.html">인동 반성폭력 세칙</a></li>
+        <li><a href="about.html">소개</a></li>
+        <li><a href="constitution.html">정관</a></li>
+        <li><a href="declaration.html">창립선언문</a></li>
+        <li><a href="anti-violence.html">반성폭력 세칙</a></li>
     </ul>
 </li>
-            <a href="newsletter.html">NEWSLETTER</a>
-            <a href="activity.html">ACTIVITY</a>
-            <a href="join us.html">JOIN US</a>
+            <a href="newsletter.html" class="english">NEWSLETTER</a>
+            <a href="activity.html" class="english">ACTIVITY</a>
+            <a href="join us.html" class="english">JOIN US</a>
         </nav>
 
             <button class="menu-button" onclick="toggleMenu()" aria-label="메뉴 열기">
@@ -55,7 +52,7 @@
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="mobile-menu">
     <button class="menu-button" onclick="closeMenu()">☰</button>
-    <a href="index.html" onclick="closeMenu()">HOME</a>
+    <a href="index.html" class="english" onclick="closeMenu()">HOME</a>
 
     <!-- ABOUT -->
     <div class="mobile-dropdown">
@@ -67,16 +64,16 @@
         </button>
 
         <div class="mobile-submenu" id="aboutSubmenu">
-            <a href="about.html" onclick="closeMenu()">인동 소개</a>
-            <a href="constitution.html" onclick="closeMenu()">인동 정관</a>
-            <a href="declaration.html" onclick="closeMenu()">인동 창립선언문</a>
-            <a href="anti-violence.html" onclick="closeMenu()">인동 반성폭력 세칙</a>
+            <a href="about.html" onclick="closeMenu()">소개</a>
+            <a href="constitution.html" onclick="closeMenu()">정관</a>
+            <a href="declaration.html" onclick="closeMenu()">창립선언문</a>
+            <a href="anti-violence.html" onclick="closeMenu()">반성폭력 세칙</a>
         </div>
     </div>
 
-    <a href="newsletter.html" onclick="closeMenu()">NEWSLETTERS</a>
-    <a href="activity.html" onclick="closeMenu()">ACTIVITY</a>
-    <a href="join-us.html" onclick="closeMenu()">JOIN US</a>
+    <a href="newsletter.html" class="english" onclick="closeMenu()">NEWSLETTERS</a>
+    <a href="activity.html" class="english" onclick="closeMenu()">ACTIVITY</a>
+    <a href="join-us.html" class="english" onclick="closeMenu()">JOIN US</a>
 
 </div>
 
@@ -84,44 +81,26 @@
 
     <section class="page-header">
 
-        <div class="section-label">
-            ABOUT US
-        </div>
-
-        <h1>
-            우리는 왜<br>
-            <span>인권을 이야기할까요?</span>
-        </h1>
+        <h2 class="english">ABOUT US</h2>
 
     </section>
 
 
-    <section class="about-content">
+<section class="document-layout">
 
-        <div class="about-text-large">
+  <aside class="side-menu">
+    <h3 class="english">ABOUT</h3>
+    <nav>
+      <a href="about.html">소개</a>
+                        <a href="constitution.html">정관</a>
+                        <a href="declaration.html">창립선언문</a>
+                        <a href="anti-violence.html">반성폭력 세칙</a>
+    </nav>
+  </aside>
+  <div class="document-content">
 
-            <p>
-                우리는 대학에서 인권과 사회의 문제를
-                함께 공부하고 이야기하는
-                대학생 인권동아리입니다.
-            </p>
-
-            <p>
-                노동, 여성, 장애, 이주,
-                기후정의 등 우리의 삶과 연결된
-                다양한 문제를 고민합니다.
-            </p>
-
-            <p>
-                혼자서는 지나칠 수 있는 질문을
-                함께 이야기하고,
-                우리가 바꿀 수 있는 사회를
-                상상합니다.
-            </p>
-
-        </div>
-
-    </section>
+  </div>
+</section>
 
 </main>
 

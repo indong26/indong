@@ -13,6 +13,13 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "April16thTTF-Promise";
+    src: url("fonts/April16thTTF-Promise.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family:
         -apple-system,
@@ -24,6 +31,9 @@ body {
     color: #222;
     background: #fff;
     line-height: 1.6;
+}
+.english {
+    font-family: April16thTTF-Promise;
 }
 
 a {
@@ -214,11 +224,11 @@ button {
 .section-label {
     display: inline-block;
 
-    padding: 6px 13px;
+    padding: 12px 40px;
 
     background: var(--yellow);
 
-    font-size: 11px;
+    font-size: 30px;
     font-weight: 900;
 
     letter-spacing: 0.08em;
@@ -368,7 +378,6 @@ button {
 .footer-copy {
     color: #777;
 }
-
 
 /* =========================
    LOADING
@@ -682,6 +691,7 @@ css
 ========================= */
 
 .nav-dropdown {
+    list-style: none;
     position: relative;
 }
 
@@ -761,6 +771,10 @@ css
     z-index: 1000;
 }
 
+.nav-main {
+    font-family: April16thTTF-Promise;
+}
+
 /* 서브메뉴 링크 */
 .dropdown-menu a {
     display: block;
@@ -795,7 +809,7 @@ css
    display: flex;
    align-items: flex-start;
    max-width: 1200px;
-   margin: o auto;
+   margin: 0 auto;
    padding: 80px 30px;
    gap: 70px;
 }
@@ -805,14 +819,13 @@ css
     width: 220px;
     flex-shrink: 0;
     padding: 25px;
-    background-color: #f7f7f7;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
+   
     position: sticky;
     top: 100px;
 }
 
 .side-menu h3 {
+    border-bottom: 2px solid #222;
     font-size: 20px;
     margin-bottom: 20px;
 }
@@ -1217,7 +1230,7 @@ html {
 
         width: 100%;
         padding: 18px 0;
-
+        font-family: April16thTTF-Promise;
         font-size: 16px;
         font-weight: 600;
         color: #222;
@@ -1264,7 +1277,8 @@ html {
         transform: rotate(180deg);
     }
     .document-layout {
-        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
         gap: 25px;
         margin: 30px auto;
         padding: 0 20px;
@@ -1272,8 +1286,8 @@ html {
 
     /* 왼쪽 메뉴 */
     .side-menu {
-        position: static;
-        width: 100%;
+        position: sticky;
+        width: 30%;
         padding: 18px;
     }
 
@@ -1284,7 +1298,8 @@ html {
 
     /* 본문 */
     .document-content {
-        width: 100%;
+        flex: 1;
+        width: 70%;
     }
 
     .document-content h2 {
