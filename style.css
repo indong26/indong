@@ -156,17 +156,17 @@ button {
 .background {
     position: relative;
     width: 100%;
-    height: 0vh;
+    height: 500px;
     overflow: hidden;
     margin-bottom: 25px;
 }
 
-.image {
+.background .image {
     width: 100%;
     height: 100%;
 }
 
-.image img {
+.background .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
