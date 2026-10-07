@@ -449,7 +449,6 @@ css
     font-weight: 600;
 }
 
-
 /* 날짜 */
 
 .latest-newsletter-date {
@@ -458,6 +457,98 @@ css
     font-size: 12px;
 
     color: #888;
+}
+
+/* =========================
+   MOBILE - LATEST NEWSLETTER
+========================= */
+
+@media (max-width: 768px) {
+
+    .latest-newsletter {
+        padding: 60px 20px;
+    }
+
+
+    /* 제목 영역 */
+
+    .section-title {
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    .section-title a {
+        font-size: 13px;
+    }
+
+
+    /* 뉴스레터 2열 */
+
+    .latest-newsletter-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+
+
+    /* 이미지 */
+
+    .latest-newsletter-card img {
+        aspect-ratio: 1 / 1;
+        margin-bottom: 12px;
+    }
+
+
+    /* 카테고리 */
+
+    .latest-newsletter-category {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+
+    /* 제목 */
+
+    .latest-newsletter-title {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+
+    /* 날짜 */
+
+    .latest-newsletter-date {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .latest-newsletter {
+        padding: 50px 18px;
+    }
+
+
+    .latest-newsletter-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    .latest-newsletter-card img {
+        aspect-ratio: 4 / 3;
+    }
+
 }
 
 /* 서브메뉴 */
